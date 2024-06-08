@@ -36,6 +36,9 @@ print("Duplicated data:")
 # Controlla la presenza di duplicati
 print(historical_stocks.duplicated().sum())
 
+historical_stocks.replace(["N/A", "NaN"], pd.NA, inplace=True)
+historical_stocks.dropna(subset=['industry', 'sector'], inplace=True)
+
 merged_data = pd.merge(historical_stock_prices, historical_stocks, on='ticker')
 
 merged_data.to_csv('stocks_data.csv', index=False, header=True, sep=';')

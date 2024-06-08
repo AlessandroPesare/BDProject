@@ -13,7 +13,9 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1");
 
-LOAD DATA INPATH '/user/alessandropesare/input/historical_stocks.csv' INTO TABLE historical_stocks;
+---LOAD DATA INPATH '/user/alessandropesare/input/historical_stocks.csv' INTO TABLE historical_stocks;
+
+LOAD DATA LOCAL INPATH '/home/hadoop/historical_stocks.csv' INTO TABLE historical_stocks;
 
 -- Cancella e crea la tabella historical_stock_prices
 DROP TABLE IF EXISTS historical_stock_prices;
@@ -33,7 +35,9 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1");
 
-LOAD DATA INPATH '/user/alessandropesare/input/historical_stock_prices.csv' INTO TABLE historical_stock_prices;
+---LOAD DATA INPATH '/user/alessandropesare/input/historical_stock_prices.csv' INTO TABLE historical_stock_prices;
+
+LOAD DATA LOCAL INPATH '/home/hadoop/historical_stock_prices.csv' INTO TABLE historical_stock_prices;
 
 -- Cancella e crea la tabella historical_stock_prices_with_year
 DROP TABLE IF EXISTS historical_stock_prices_with_year;
