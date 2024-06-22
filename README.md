@@ -1,4 +1,5 @@
-# BDProject
+# Big Data Project
+## Map Reduce, Hive and Spark
 Progetto per il corso di Big Data per l'anno accademico 2023/2024 il cui obiettivo è una analisi comparativa dei framework più noti per l'elaborazione dei Big Data:
 1. Map Reduce
 2. Hive
